@@ -108,7 +108,7 @@
 
             //borda inferior
             for (let l=-1;l < 2; l++){
-                sum2 = sum2 + img2.get(altura,i+l)*kernel[0][l+1];
+                sum2 = sum2 + img2.get(altura,i+l)*kernel[2][l+1];
             }
             for (let k=-1; k < 1; k++){
                 for (let l=-1;l < 2; l++){
@@ -150,7 +150,7 @@
             sum = sum + img2.get(k,0)*kernel[k+1][0];
         }
 
-        sum = sum + img2.get(0,0)*kernel[0][0];
+        sum = sum + img2.get(0,0)*kernel[1][1];
 
 
 
@@ -180,7 +180,7 @@
             sum = sum + img2.get(k,largura)*kernel[k+1][2];
         }
 
-        sum = sum + img2.get(0,largura)*kernel[0][2];
+        sum = sum + img2.get(0,largura)*kernel[1][1];
         
 
         if(border != 'icrop'){
@@ -208,7 +208,7 @@
             sum = sum + img2.get(altura+k,0)*kernel[k+1][0];
         }
 
-        sum = sum + img2.get(altura,0)*kernel[0][0];
+        sum = sum + img2.get(altura,0)*kernel[1][1];
 
 
         if(border != 'icrop'){
@@ -236,7 +236,7 @@
             sum = sum + img2.get(altura+k,largura)*kernel[k+1][2];
         }
 
-        sum = sum + img2.get(altura,largura)*kernel[2][2];
+        sum = sum + img2.get(altura,largura)*kernel[1][1];
         
 
         if(border != 'icrop'){
